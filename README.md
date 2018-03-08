@@ -2,6 +2,8 @@
 
 > Spring Boot + Vue.js project
 
+This project uses Spring Boot including Spring Data Rest, Spring Data JPA, Spring Security for back-end, and Vue.js for a front-end framework.
+
 ## Build Setup
 
 ``` bash
