@@ -3,7 +3,8 @@ import Vue from 'vue';
 const app = new Vue({
   el: '#app',
   data: {
-    msg: 'hello!!',
+    msg: 'hello!?',
+    appLogo: '/assets/logo.png',
   },
 });
 
