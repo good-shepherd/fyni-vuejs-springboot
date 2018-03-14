@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>fyni</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 <div id="app">
-  <img alt="app" :src="appLogo" style="height:36px" />
+  <!--<h1 v-text="msg" v-bind:style="{color:isOnline? '#ff6a00':'#000'}"></h1>-->
+  <h1 v-cloak>{{msg}}</h1>
+  <form>
+    <input v-model="query" placeholder="search.....">
+    <button type="button" v-on:click="executeSearch('token', $event)">search</button>
+  </form>
+  <br />
+  <div>Searching for: {{query}}</div>
+  <label>
+    <input type="checkbox" v-model="isPowerSyntaxEnabled" value="beers">
+    beers
+  </label>
+  <label>
+    <input type="checkbox" v-model="searchIndices" value="breweries">
+    breweries
+  </label>
+  <label>
+    <input type="checkbox" v-model="searchIndices" value="soju">
+    soju
+  </label>
+  <small>
+    selected: {{searchIndices}}
+  </small>
 </div>
 <!-- built files will be auto injected -->
 </body>
