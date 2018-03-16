@@ -1,6 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import Vue from 'vue';
+import BootstrapVue from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 import Layout from '@/components/Layout';
 
+Vue.use(BootstrapVue);
 // eslint-disable-next-line
 console.log(Layout);
 
