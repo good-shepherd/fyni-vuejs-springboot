@@ -1,21 +1,13 @@
 import Vue from 'vue';
+import Layout from '@/components/Layout';
+
+// eslint-disable-next-line
+console.log(Layout);
 
 const app = new Vue({
   el: '#app',
-  data: {
-    msg: 'hello!?',
-    isOnline: true,
-    query: '',
-    isPowerSyntaxEnabled: false,
-    searchIndices: [],
-  },
-  methods: {
-    executeSearch(token, event) {
-      const message = `Token: ${token} Query: ${this.query} Button: ${event.target.innerText}`;
-      // eslint-disable-next-line
-      alert(message);
-    },
-  },
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+  ...Layout,
 });
 
 export default { app };
